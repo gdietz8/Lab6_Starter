@@ -93,10 +93,9 @@ function initFormHandler() {
     mainEl.append(recCardEl);
     // B9. TODO - Get the recipes array from localStorage, add this new recipe to it, and
     //            then save the recipes array back to localStorage
-    const recipes = JSON.parse(localStorage.getItem("recipes")); //getRecipesFromStorage();
+    const recipes = getRecipesFromStorage();
     recipes.push(recipeObject);
-    localStorage.setItem("recipes", JSON.stringify(recipes));
-    //saveRecipesToStorage(recipes);
+    saveRecipesToStorage(recipes);
   });
   // B10. TODO - Get a reference to the "Clear Local Storage" button
   const CLSbutton = document.querySelector('button[type="button"]');
